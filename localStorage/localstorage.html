@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this is js practise</h1>
+    <script>
+        let key = prompt("Enter key");
+        let val = prompt("Enter val");
+
+        localStorage.setItem(key, val);
+
+        console.log(`The key is ${key} and the value is ${val}`);
+
+        if (key == 'fm') {
+            setTimeout(() => {
+                localStorage.removeItem(key);
+            }, 2000);
+        } else if (key == 'fmf') {
+            document.querySelector('h1').style.color = 'red';
+        } else {
+            console.log(`The key is ${key} and the value is ${val}`);
+        }
+    </script>
+</body>
+
+</html>
